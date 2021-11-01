@@ -6,7 +6,6 @@ orbs:
 jobs:
   test:
     docker:
-      - image: docker:
       - image: circleci/node
     steps:
       - checkout
@@ -15,7 +14,6 @@ jobs:
       - run: npm run lint
   deploy:
     docker:
-      - image: docker:
       - image: circleci/node:16.13.0
     environment:
       AWS_REGION: eu-west-2
